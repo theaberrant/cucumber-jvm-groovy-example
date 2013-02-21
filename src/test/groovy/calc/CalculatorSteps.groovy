@@ -36,7 +36,7 @@ Given(~"(\\d+) into the") {->
     throw new RuntimeException("should never get here since we're running with --guess")
 }
 
-When(~"I press (\\w+)") { String opname ->
+When(~"(\\w+)?I press (\\w+)") { String nothing, String opname ->
     result = calc."$opname"()
 }
 
